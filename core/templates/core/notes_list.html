@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+  <thread>
+    <tr>
+      <th>
+        My Notes
+      </th>
+    </tr>
+  </thread>
+  <tbody>
+    {% for note in notes %}
+    <tr>
+      <a href="{% url 'notes_detail' note.pk %}">
+        <td>{{note.title}}</td>
+      </a>
+      <td>{{note.body}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
