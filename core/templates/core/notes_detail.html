@@ -3,10 +3,15 @@
 
 <h2>{{note.title}}</h2>
 <p>{{note.body}}</p>
+<p>{{note.created_at}}</p>
 <a href="{% url 'note_edit' pk=note.pk %}">
   <button>
     Click me to edit note
   </button>
 </a>
-
+<a href="{% url 'note_delete' pk=note.pk %}">
+  <button>
+    Click me to delete note
+  </button>
+</a>
 {% endblock %}
