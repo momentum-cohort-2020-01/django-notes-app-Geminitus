@@ -1,22 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<table>
-  <thread>
-    <tr>
-      <th>
-        My Notes
-      </th>
-    </tr>
-  </thread>
-  <tbody>
-    {% for note in notes %}
-    <tr>
-      <a href="{% url 'notes_detail' note.pk %}">
-        <td>{{note.title}}</td>
-      </a>
-      <td>{{note.body}}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<h2> My Notes </h2>
+{% for note in notes %}
+<div id="{{note.pk}}">
+  <a href="{% url 'notes_detail' note.pk %}">{{note.title}}</a>
+  <p>{{note.body}}</p>
+</div>
+{% endfor %}
+<a href="{% url 'new_note' %}"><button>Click me to add new note</button></a>
 {% endblock %}

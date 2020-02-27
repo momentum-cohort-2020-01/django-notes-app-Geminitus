@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0 ;
+  padding: 0;
+}
+
+body h2 {
+  margin-bottom: 2rem;
+}
+
+body a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+body p {
+  margin-bottom: 1rem;
+}

@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<dl>
-  <dt>{{note.title}}</dt>
-  <dd>{{note.body}}</dd>
-</dl>
+
+<h2>{{note.title}}</h2>
+<p>{{note.body}}</p>
+<a href="{% url 'note_edit' pk=note.pk %}">
+  <button>
+    Click me to edit note
+  </button>
+</a>
+
 {% endblock %}
